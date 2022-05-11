@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'PhishingWebsiteDetection'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_37EB1A1C12CB4CDE871E302B5D7831C9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7B884C85397941B58ADE52862020F066 }}
