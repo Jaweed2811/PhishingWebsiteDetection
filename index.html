@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Detection of phishing websites</title>
+    <style>
+        body {
+          background-image: url("{{ url_for('static', filename='srpbg.jpg') }}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+  </head>
+  <body>
+    <div align="center" style="margin-top:200px">
+        <form action="/getURL" method="POST">
+        <legend><h2><i>Phishing Website Detection</i></h2></legend><br>
+        <input type="text" name="url" id="url" autocomplete="on" value="{{url}}"placeholder="Enter website" size="90" required>
+       <button class="btn-outline-success">Check</button><br><br>
+    </form>
+    {% if predicted_value %}
+    <h3 style="color:blue" align="center">{{predicted_value}}</h3>
+    {% endif %}
+    </div>
+       
+</body>
+</html>
